@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Demidov</title>
+        <style>
+			body{
+				background-color: lightyellow;
+			}
+            div{
+                
+                
+            }
+            #hotel{  
+				float: left;
+				margin-left: 20px;
+				height: 60px;
+				width: 160px;
+				border: 1px solid black;
+                font-size: 20px;
+				text-align: center;
+				background-color: lightgreen;
+            }
+			#buffet{ 
+				float: left;
+				margin-left: 20px;
+				height: 60px;
+				width: 150px;
+				border: 1px solid black;
+                font-size: 20px;
+				text-align: center;
+				background-color: lightgreen;
+            }
+			#ticket{   
+				float: left;
+				margin-left: 20px;
+				height: 60px;
+				width: 160px;
+				border: 1px solid black;
+                font-size: 20px;
+				text-align: center;
+				background-color: lightgreen;
+            }
+			#sitebar{
+				margin-left: 24%;
+				height: 100px;
+				width: 540px;
+			}
+			#main{
+				vertical-align: middle;
+				margin-left: 25%;
+				height: 200px;
+				width: 540px;
+				margin-bottom: 500px;
+			}
+
+        </style>
+		
+    </head>
+    <body>
+		<div id="sitebar">
+			<a href="/"><div id="ticket" >Главная</div></a>
+			<a href="/res"><div id="hotel" >Забронировать столик</div></a>
+			<a href="/buffet"><div id="buffet" >Меню</div></a>
+		</div>
+        <script>
+			alert("К сожалению, на это время столик уже занят, попробуйте выбрать другую дату или время")
+		</script>
+    </body>
+</html>

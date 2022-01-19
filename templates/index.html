@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Relax Lounge Pub</title>
+        <style>
+
+			body{
+				background-color: #f8ab8d;
+			}
+            div{
+                
+                
+            }
+            		 #hotel{  
+				float: left;
+				margin-left: 20px;
+				height: 60px;
+				width: 160px;
+				border: 1px solid black;
+                font-size: 20px;
+				text-align: center;
+				background-color: lightgreen;
+            }
+			#buffet{ 
+				float: left;
+				margin-left: 20px;
+				height: 60px;
+				width: 150px;
+				border: 1px solid black;
+                font-size: 20px;
+				text-align: center;
+				background-color: lightgreen;
+            }
+			#ticket{   
+				float: left;
+				margin-left: 20px;
+				height: 60px;
+				width: 150px;
+				border: 1px solid black;
+                font-size: 20px;
+				text-align: center;
+				background-color: lightgreen;
+            }
+			#sitebar{
+				margin-left: 24%;
+				height: 100px;
+				width: 540px;
+			}
+			#main{
+				vertical-align: middle;
+				margin-left: 25%;
+				height: 200px;
+				width: 540px;
+				margin-bottom: 500px;
+			}
+
+        </style>
+    </head>
+    <body>
+		<div id="sitebar">
+			<a href="/"><div id="ticket" >Главная</div></a>
+			<a href="/res"><div id="hotel" >Забронировать столик</div></a>
+			<a href="/buffet"><div id="buffet" >Меню</div></a>
+		</div>
+		<div id="main">
+			<img src="{% static 'images/1.jpg' %}" alt="главный зал" height="300px" width="100%" >
+			<p>
+				Приветствуем Вас на официальном сайте lounge-бара «Relax Lounge Pub».
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZRnIn8IS2JA?rel=0&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</p>
+			<p>
+				К вашим услугам 15 комфортабельных столиков,  лучшие блюда и незабываемая уютная атмосфера. «Relax Lounge Pub» располагается в самом центре города, на набережной реки Исеть. Отсюда вы можете наблюдать необыкновенные пейзажи и наслаждаться общением с близкими.
+			</p>
+			<p>
+				В распоряжении гостей бесплатный наземный паркинг, высокоскоростной WiFi порадует Вас отличной связью - все фотокарточки непременно будут загружены в инстаграмм без задержек), наши официанты прошли тщательный отбор, чтобы работать в этом прекрасном заведении и радовать наших дорогих гостей! Также у нас есть зал для больших торжеств: свадьбы, корпоративы, день рождения бабули - всё это можно провести у нас!
+			<p>
+				Также хотим обрадовать гостей открытием VIP lounge-зоны, где вы можете обособлено от всех расслабиться и отдохнуть. В наличии имеются кальяны, настольные игры, пледы и подушки
+			</p>
+		</div>
+    </body>
+</html>

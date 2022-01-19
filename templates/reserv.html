@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Relax Lounge Pub</title>
+        <style>
+			.form-group{margin: 10px 0;}
+			.form-group input[type=text]{
+				width:250px;
+				height: 25px;
+				border-radius:3px;
+				
+			}
+			.form-group input[type=number]{
+				width:250px;
+				height: 25px;
+				border-radius:3px;
+				
+			}
+			.form-group input[type=checkbox]{
+				width:250px;
+				height: 25px;
+				border-radius:3px;
+				
+			}
+			input[type=text]:focus {
+				background-color: lightblue;
+			}
+			input[type=number]:focus {
+				background-color: lightblue;
+			}
+			select{
+				width:250px;
+				height: 25px;
+				border-radius:3px;
+			}
+			select:focus{
+				background-color: lightblue;
+			}
+			body{
+				background-color: lightyellow;
+			}
+            div{
+                
+                
+            }
+            #hotel{  
+				float: left;
+				margin-left: 20px;
+				height: 60px;
+				width: 150px;
+				border: 1px solid black;
+                font-size: 20px;
+				text-align: center;
+				background-color: lightgreen;
+            }
+			#buffet{ 
+				float: left;
+				margin-left: 20px;
+				height: 60px;
+				width: 150px;
+				border: 1px solid black;
+                font-size: 20px;
+				text-align: center;
+				background-color: lightgreen;
+            }
+			#ticket{   
+				float: left;
+				margin-left: 20px;
+				height: 60px;
+				width: 150px;
+				border: 1px solid black;
+                font-size: 20px;
+				text-align: center;
+				background-color: lightgreen;
+            }
+			#sitebar{
+				margin-left: 24%;
+				height: 100px;
+				width: 540px;
+			}
+			#main{
+				#margin-top: 30px;
+				vertical-align: middle;
+				margin-left: 25%;
+				height: 200px;
+				width: 540px;
+				#float: right;
+				text-align: center;
+				margin-bottom: 500px;
+			}
+
+        </style>
+		
+    </head>
+    <body>
+		<div id="sitebar">
+			<a href="/"><div id="ticket" >Главная</div></a>
+			<a href="/date"><div id="hotel" >Забронировать столик</div></a>
+			воды<a href="/buffet"><div id="buffet" >Меню</div></a>
+		</div>
+		<div id="main">
+			<H3>Заполните форму бронирования:</H3>
+			<form method="POST">
+				{% csrf_token %}
+				
+				<div>
+				
+					{% for field in form %}
+					<div class="form-group">
+						{{field.label_tag}}
+						<div>{{field}}</div>
+						
+					</div>
+					{% endfor %}
+				</div>
+				<input type="submit" value="Send" >
+			</form>
+		</div>
+    </body>
+</html>

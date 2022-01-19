@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Relax Lounge Pub</title>
+        <style>
+			body{
+				background-color: lightyellow;
+			}
+            div{
+                
+                
+            }
+            #hotel{  
+				float: left;
+				margin-left: 20px;
+				height: 60px;
+				width: 160px;
+				border: 1px solid black;
+                font-size: 20px;
+				text-align: center;
+				background-color: lightgreen;
+            }
+			#buffet{ 
+				float: left;
+				margin-left: 20px;
+				height: 60px;
+				width: 150px;
+				border: 1px solid black;
+                font-size: 20px;
+				text-align: center;
+				background-color: lightgreen;
+            }
+			#ticket{   
+				float: left;
+				margin-left: 20px;
+				height: 60px;
+				width: 150px;
+				border: 1px solid black;
+                font-size: 20px;
+				text-align: center;
+				background-color: lightgreen;
+            }
+			#sitebar{
+				margin-left: 24%;
+				height: 100px;
+				width: 540px;
+			}
+			#main{
+				#margin-top: 30px;
+				vertical-align: middle;
+				margin-left: 25%;
+				height: 200px;
+				width: 540px;
+				#float: right;
+				margin-bottom: 500px;
+				background-color: lightgray;
+			}
+
+        </style>
+    </head>
+    <body>
+		<div id="sitebar">
+			<a href="/"><div id="ticket" >Главная</div></a>
+			<a href="/res"><div id="hotel" >Забронировать столик</div></a>
+			<a href="/buffet"><div id="buffet" >Меню</div></a>
+		</div>
+		<div id="main">
+			<h2>Уважаемый(ая), {{ name }}</h2>
+			<p>
+				Мы забронировали вам столик {{ type_room }} в нашем заведении на {{ count_mans }} персон(ы).
+			</p>
+			<p>
+				на {{ date_s }} число, в {{ date_e }} . Ждём Вас и ваших близких!:)
+			</p>
+		</div>
+    </body>
+</html>

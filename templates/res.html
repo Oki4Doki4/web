@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Relax Lounge Pub</title>
+        <style>
+			.first  {
+				list-style: none;
+				padding: 0;
+			}
+			.first li {
+				padding: 10px 30px;
+				background: linear-gradient(to left, #f8ab8d 0%, white, #f8ab8d);
+				border-bottom: 1px solid grey;
+				color: #506a6b;
+				font-size: 20px;
+				box-shadow: 0 5px 5px 0 rgba(0,0,0, .2);
+				margin-bottom: 5px;
+			}
+			.first li:last-child {
+				border-bottom: none;
+			}
+			body{
+				background-color: lightyellow;
+			}
+            div{
+
+
+            }
+            #hotel{
+				float: left;
+				margin-left: 20px;
+				height: 60px;
+				width: 160px;
+				border: 1px solid black;
+                font-size: 20px;
+				text-align: center;
+				background-color: lightgreen;
+            }
+			#buffet{
+				float: left;
+				margin-left: 20px;
+				height: 60px;
+				width: 160px;
+				border: 1px solid black;
+                font-size: 20px;
+				text-align: center;
+				background-color: lightgreen;
+            }
+			#ticket{
+				float: left;
+				margin-left: 20px;
+				height: 60px;
+				width: 150px;
+				border: 1px solid black;
+                font-size: 20px;
+				text-align: center;
+				background-color: lightgreen;
+            }
+			#sitebar{
+				margin-left: 24%;
+				height: 100px;
+				width: 540px;
+			}
+			#main{
+				vertical-align: middle;
+				margin-left: 25%;
+				height: 200px;
+				width: 540px;
+				#float: right;
+				text-align: center;
+				margin-bottom: 500px;
+			}
+
+        </style>
+
+    </head>
+<body>
+    <div id="sitebar">
+			<a href="/"><div id="ticket" >Главная</div></a>
+			<a href="/res"><div id="hotel" >Забронировать столик</div></a>
+			<a href="/buffet"><div id="buffet" >Меню</div></a>
+		</div>
+    <div id="main">
+			<H3>Заполните форму бронирования:</H3>
+    <form method="POST">
+        {% csrf_token %}
+    <table>
+        {{ form }}
+    </table>
+
+    <input type="submit" value="Send" >
+    </form>
+    </div>
+</body>
+</html>

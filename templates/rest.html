@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Relax Lounge Pub</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <style>
+
+			body{
+				background-color: #e0f9ff;
+			}
+            div{
+                
+                
+            }
+            .button {
+		margin:20px;
+		height:20px;
+		background: #6047ff;
+		color:#fff;
+		padding:15px;
+		cursor:pointer;
+	}
+            #hotel{  
+				float: left;
+				margin-left: 20px;
+				height: 60px;
+				width: 160px;
+				border: 1px solid black;
+                font-size: 20px;
+				text-align: center;
+				background-color: lightgreen;
+            }
+			#buffet{ 
+				float: left;
+				margin-left: 20px;
+				height: 60px;
+				width: 150px;
+				border: 1px solid black;
+                font-size: 20px;
+				text-align: center;
+				background-color: lightgreen;
+            }
+			#ticket{   
+				float: left;
+				margin-left: 20px;
+				height: 60px;
+				width: 150px;
+				border: 1px solid black;
+                font-size: 20px;
+				text-align: center;
+				background-color: lightgreen;
+            }
+			#sitebar{
+				margin-left: 24%;
+				height: 100px;
+				width: 540px;
+			}
+			#main{
+				#margin-top: 30px;
+				vertical-align: middle;
+				margin-left: 25%;
+				height: 200px;
+				width: 540px;
+				#float: right;
+				margin-bottom: 500px;
+			}
+
+        </style>
+        <script>
+$(document).on('click', '.button', function() {
+	var $video = $('#video'),
+		src = $video.attr('src');
+
+	$video.attr('src', src + '&autoplay=1');
+});
+</script>
+    </head>
+    <body>
+
+		<div id="sitebar">
+			<a href="/"><div id="ticket" >Главная</div></a>
+			<a href="/res"><div id="hotel" >Забронировать столик</div></a>
+			<a href="/buffet"><div id="buffet" >Меню</div></a>
+		</div>
+		<div id="main">
+			<img src="{% static 'images/3.jpg' %}" alt="Меню" height="300px" width="100%" >
+			<H3>Меню:</H3>
+			<H2>Кухня на любой вкус!</H2>
+			<p>
+				В меню огромный выбор изысканной кухни на любой вкус! Лучшие повара трудятся во благо вашего комфорта и сытости!). Начните день с питательного завтрака, обсудите вопросы с коллегами за бизнес-ланчем и завершите вечер великолепным ужином. Наше заведение радует гостей разнообразным меню, включая специальные предложения, предлагая не только вкусную еду, но и идеальную обстановку для обеда или ужина. <br>
+                А начиная с 22:00 вас ждёт увлекательная ночная программа и приглашённые гости каждую пятницу!
+			</p>
+             <div class="button">Play video preview</div>
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/lcU3pruVyUw?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+			<p>
+				с 9:00 до 11:00 доступен комбо-завтрак.<br>
+				Деловые обеды подаются по будням с 12:00 до 17:00. Меню обновляется еженедельно, поэтому Вы всегда сможете попробовать что-то новое.<br>
+                Актуальное меню расположено ниже:
+                <H2>Карта бара</H2>
+                <img src="{% static 'images/4.png' %}" alt="Меню" height="600px" width="100%" >
+                <H2>Хорошо выпить</H2>
+                <img src="{% static 'images/6.png' %}" alt="Меню" height="500px" width="100%" >
+                <H2>Хорошо поесть</H2>
+                <img src="{% static 'images/5.png' %}" alt="Меню" height="500px" width="100%" >
+			</p>
+			<H3>Время работы:</H3>
+			<H2> 8:30 - 03:00</H2>
+		</div>
+    </body>
+</html>
